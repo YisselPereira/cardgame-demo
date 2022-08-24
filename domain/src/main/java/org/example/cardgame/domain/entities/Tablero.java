@@ -1,4 +1,4 @@
-package org.example.cardgame.domain;
+package org.example.cardgame.domain.entities;
 
 import co.com.sofka.domain.generic.Entity;
 import org.example.cardgame.domain.values.Carta;

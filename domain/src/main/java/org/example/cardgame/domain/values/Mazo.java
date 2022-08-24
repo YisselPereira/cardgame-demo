@@ -10,17 +10,17 @@ import java.util.Set;
  */
 public class Mazo implements ValueObject<Mazo.Props> {
 
-    private final Set<Carta> catas;
+    private final Set<Carta> cartas;
     private final Integer cantidad;
 
     /**
      * Instantiates a new Mazo.
      *
-     * @param catas the catas
+     * @param cartas the catas
      */
-    public Mazo(Set<Carta> catas) {
-        this.catas = catas;
-        this.cantidad = catas.size();
+    public Mazo(Set<Carta> cartas) {
+        this.cartas = cartas;
+        this.cantidad = cartas.size();
     }
 
     @Override
@@ -28,7 +28,7 @@ public class Mazo implements ValueObject<Mazo.Props> {
         return new Props() {
             @Override
             public Set<Carta> cartas() {
-                return catas;
+                return cartas;
             }
 
             @Override
@@ -45,7 +45,7 @@ public class Mazo implements ValueObject<Mazo.Props> {
      * @return the mazo
      */
     public Mazo nuevaCarta(Carta carta) {
-        var catas = new HashSet<>(this.catas);
+        var catas = new HashSet<>(this.cartas);
         catas.add(carta);
         return new Mazo(catas);
     }
@@ -58,10 +58,10 @@ public class Mazo implements ValueObject<Mazo.Props> {
      */
     public Mazo retirarCarta(Carta cartaRetirada) {
         var cartaId = cartaRetirada.value().cartaId().value();
-        this.catas.removeIf(
+        this.cartas.removeIf(
                 carta -> cartaId.equals(carta.value().cartaId().value())
         );
-        return new Mazo(this.catas);
+        return new Mazo(this.cartas);
     }
 
     /**

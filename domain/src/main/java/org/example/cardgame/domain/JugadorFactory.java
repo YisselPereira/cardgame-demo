@@ -1,5 +1,6 @@
 package org.example.cardgame.domain;
 
+import org.example.cardgame.domain.entities.Jugador;
 import org.example.cardgame.domain.values.JugadorId;
 import org.example.cardgame.domain.values.Mazo;
 

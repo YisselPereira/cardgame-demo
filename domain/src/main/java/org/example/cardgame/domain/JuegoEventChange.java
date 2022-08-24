@@ -1,6 +1,8 @@
 package org.example.cardgame.domain;
 
 import co.com.sofka.domain.generic.EventChange;
+import org.example.cardgame.domain.entities.Jugador;
+import org.example.cardgame.domain.entities.Tablero;
 import org.example.cardgame.domain.events.*;
 
 import java.util.HashMap;

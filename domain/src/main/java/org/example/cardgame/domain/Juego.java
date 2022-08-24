@@ -2,6 +2,8 @@ package org.example.cardgame.domain;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import org.example.cardgame.domain.entities.Jugador;
+import org.example.cardgame.domain.entities.Tablero;
 import org.example.cardgame.domain.events.*;
 import org.example.cardgame.domain.values.*;
 
